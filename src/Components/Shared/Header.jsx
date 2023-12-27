@@ -1,6 +1,14 @@
 import { NavLink } from "react-router-dom";
+import Products from "../Products/Products";
 
 const Header = () => {
+
+    const {loading} = Products();
+
+    if (loading) {
+        return <div className="h-10 w-10 rounded-full border-8 border-dashed border-black mt-44 animate-spin mx-auto"></div>;
+    }
+
     return (
         <>
             <div className="flex items-center justify-center mt-8 gap-4 w-1/2 mx-auto">
