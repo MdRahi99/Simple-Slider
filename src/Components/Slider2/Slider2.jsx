@@ -6,19 +6,63 @@ import { BsDot } from '@react-icons/all-files/bs/BsDot';
 const Slider2 = () => {
   const { products, loading } = Products();
   const [currentIndex, setCurrentIndex] = useState(0);
-  console.log(currentIndex);
+  const [mouseDown, setMouseDown] = useState(false);
+  const [mouseStart, setMouseStart] = useState(0);
+  const [mouseEnd, setMouseEnd] = useState(0);
 
-  const bestSellerProducts = products.filter(product => product.category === "Best Seller");
+  const bestSellerProducts = products.filter(product => product.category === 'Best Seller');
 
   const numDots = Math.ceil(bestSellerProducts.length / 3);
 
+  const handleDotClick = dotIndex => {
+    setCurrentIndex(dotIndex * 3);
+  };
+
+  const handleSwipe = () => {
+    if (mouseEnd - mouseStart > 50) {
+      setCurrentIndex(prevIndex => Math.max(0, prevIndex - 3));
+    } else if (mouseStart - mouseEnd > 50) {
+      setCurrentIndex(prevIndex =>
+        Math.min(bestSellerProducts.length - 3, prevIndex + 3)
+      );
+    }
+  };
+
+  const handleMouseDown = e => {
+    setMouseDown(true);
+    setMouseStart(e.clientX);
+  };
+
+  const handleMouseMove = e => {
+    if (mouseDown) {
+      setMouseEnd(e.clientX);
+    }
+  };
+
+  const handleMouseUp = () => {
+    if (mouseDown) {
+      handleSwipe();
+      setMouseDown(false);
+      setMouseStart(0);
+      setMouseEnd(0);
+    }
+  };
+
   if (loading) {
-    return <div className="h-10 w-10 rounded-full border-8 border-dashed border-black mt-44 animate-spin mx-auto"></div>;
-}
+    return (
+      <div className="h-10 w-10 rounded-full border-8 border-dashed border-black mt-44 animate-spin mx-auto"></div>
+    );
+  }
 
   return (
     <>
-      <div className="w-full h-screen lg:w-5/6 mx-auto flex flex-col mt-8 lg:mt-0 lg:flex-row gap-8 justify-between">
+      <div
+        className="w-full h-screen lg:w-5/6 mx-auto flex flex-col mt-8 lg:mt-0 lg:flex-row gap-8 justify-between"
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+      >
         <div className="w-full flex items-center lg:w-2/3">
           <img className="w-full h-96" src="http://surl.li/oqzzu" alt="" />
         </div>
@@ -34,7 +78,7 @@ const Slider2 = () => {
                       ? 'bg-orange-600 h-3 rounded-lg w-10 transition duration-500 delay-300'
                       : ''
                   }`}
-                  onClick={() => setCurrentIndex(dotIndex * 3)}
+                  onClick={() => handleDotClick(dotIndex)}
                 />
               ))}
             </div>
