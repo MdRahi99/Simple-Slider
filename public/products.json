@@ -6,7 +6,8 @@
         "price": 699.99,
         "discount_price": 599.99,
         "description": "Experience stunning visuals with our 4K Smart TV. Stream your favorite shows and movies seamlessly.",
-        "discount_percent": 14
+        "discount_percent": 14,
+        "category": "Best Seller"
     },
     {
         "name": "Laptop",
@@ -15,7 +16,8 @@
         "price": 1099.99,
         "discount_price": 999.99,
         "description": "Powerful and portable. This laptop is perfect for work and entertainment on the go.",
-        "discount_percent": 9
+        "discount_percent": 9,
+        "category": "Best Seller"
     },
     {
         "name": "Smartphone",
@@ -24,7 +26,8 @@
         "price": 799.99,
         "discount_price": 699.99,
         "description": "Stay connected with our latest smartphone. Capture amazing photos and enjoy fast performance.",
-        "discount_percent": 13
+        "discount_percent": 13,
+        "category": "Best Seller"
     },
     {
         "name": "Wireless Earbuds",
@@ -51,7 +54,8 @@
         "price": 149.99,
         "discount_price": 129.99,
         "description": "Save energy and control your home's temperature with our smart thermostat. Easy to use and eco-friendly.",
-        "discount_percent": 13
+        "discount_percent": 13,
+        "category": "Best Seller"
     },
     {
         "name": "Electric Blender",
@@ -69,7 +73,8 @@
         "price": 499.99,
         "discount_price": 449.99,
         "description": "Experience immersive gaming with our latest gaming console. High-quality graphics and a vast game library.",
-        "discount_percent": 10
+        "discount_percent": 10,
+        "category": "Best Seller"
     },
     {
         "name": "Digital Camera",
@@ -78,7 +83,8 @@
         "price": 399.99,
         "discount_price": 349.99,
         "description": "Capture stunning moments with our high-resolution digital camera. Perfect for photography enthusiasts.",
-        "discount_percent": 13
+        "discount_percent": 13,
+        "category": "Best Seller"
     },
     {
         "name": "Smart Doorbell",
@@ -87,7 +93,8 @@
         "price": 129.99,
         "discount_price": 109.99,
         "description": "Enhance your home security with our smart doorbell. Receive alerts and see who's at your door from your phone.",
-        "discount_percent": 15
+        "discount_percent": 15,
+        "category": "Best Seller"
     },
     {
         "name": "Electric Toothbrush",
@@ -106,14 +113,16 @@
         "discount_price": 69.99,
         "description": "Transform your home with our smart lighting kit. Control colors and intensity with your smartphone.",
         "discount_percent": 22
-    },{
+    },
+    {
         "name": "Portable Power Bank",
         "rating": 4.7,
         "image": "http://surl.li/oqvox",
         "price": 39.99,
         "discount_price": 29.99,
-"description": "Stay charged on the go with our portable power bank. Compact and powerful for all your devices.",
-        "discount_percent": 25
+        "description": "Stay charged on the go with our portable power bank. Compact and powerful for all your devices.",
+        "discount_percent": 25,
+        "category": "Best Seller"
     },
     {
         "name": "Wireless Charging Pad",
@@ -140,7 +149,8 @@
         "price": 34.99,
         "discount_price": 24.99,
         "description": "Boil water quickly and efficiently with our electric kettle. Perfect for tea and coffee enthusiasts.",
-        "discount_percent": 29
+        "discount_percent": 29,
+        "category": "Best Seller"
     },
     {
         "name": "Smart Refrigerator",
