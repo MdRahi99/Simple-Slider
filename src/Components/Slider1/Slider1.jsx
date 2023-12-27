@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaArrowLeft } from "@react-icons/all-files/fa/FaArrowLeft";
 import { FaArrowRight } from "@react-icons/all-files/fa/FaArrowRight";
 import ProductCard from "../Products/ProductCard";
@@ -6,9 +6,29 @@ import Products from "../Products/Products";
 
 const Slider1 = () => {
     const { products } = Products();
-    const productsPerPage = 4;
+    const productsPerPageDesktop = 4;
+    const productsPerPageMobile = 1;
 
     const [startIndex, setStartIndex] = useState(0);
+    const [productsPerPage, setProductsPerPage] = useState(productsPerPageDesktop);
+
+    useEffect(() => {
+        const handleResize = () => {
+            const screenWidth = window.innerWidth;
+            if (screenWidth < 640) {
+                setProductsPerPage(productsPerPageMobile);
+            } else {
+                setProductsPerPage(productsPerPageDesktop);
+            }
+        };
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, [productsPerPageDesktop, productsPerPageMobile]);
 
     const handlePrev = () => {
         setStartIndex((prevIndex) => Math.max(0, prevIndex - productsPerPage));
@@ -21,7 +41,7 @@ const Slider1 = () => {
     };
 
     return (
-        <div className="w-full lg:w-5/6 mx-auto mt-12">
+        <div className="w-full h-screen lg:w-5/6 mx-auto mt-8 lg:mt-14">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-16 p-4 justify-items-center relative overflow-hidden">
                 <button
                     onClick={handlePrev}
