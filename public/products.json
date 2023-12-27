@@ -11,7 +11,7 @@
     {
         "name": "Laptop",
         "rating": 4.5,
-        "image": "laptop.jpg",
+        "image": "http://surl.li/oqvgm",
         "price": 1099.99,
         "discount_price": 999.99,
         "description": "Powerful and portable. This laptop is perfect for work and entertainment on the go.",
@@ -20,7 +20,7 @@
     {
         "name": "Smartphone",
         "rating": 4.8,
-        "image": "smartphone.jpg",
+        "image": "http://surl.li/oqvhr",
         "price": 799.99,
         "discount_price": 699.99,
         "description": "Stay connected with our latest smartphone. Capture amazing photos and enjoy fast performance.",
@@ -29,7 +29,7 @@
     {
         "name": "Wireless Earbuds",
         "rating": 4.4,
-        "image": "earbuds.jpg",
+        "image": "http://surl.li/oqvii",
         "price": 129.99,
         "discount_price": 99.99,
         "description": "Immerse yourself in high-quality sound with our wireless earbuds. Perfect for on-the-go audio.",
@@ -38,7 +38,7 @@
     {
         "name": "Robot Vacuum Cleaner",
         "rating": 4.6,
-        "image": "robot_vacuum.jpg",
+        "image": "http://surl.li/oqviw",
         "price": 249.99,
         "discount_price": 199.99,
         "description": "Keep your home clean effortlessly with our smart robot vacuum cleaner. Schedule cleanings from your phone.",
@@ -47,7 +47,7 @@
     {
         "name": "Smart Thermostat",
         "rating": 4.3,
-        "image": "thermostat.jpg",
+        "image": "http://surl.li/oqvjp",
         "price": 149.99,
         "discount_price": 129.99,
         "description": "Save energy and control your home's temperature with our smart thermostat. Easy to use and eco-friendly.",
@@ -56,7 +56,7 @@
     {
         "name": "Electric Blender",
         "rating": 4.2,
-        "image": "blender.jpg",
+        "image": "http://surl.li/oqvjy",
         "price": 79.99,
         "discount_price": 59.99,
         "description": "Create delicious smoothies and shakes with our powerful electric blender. Easy to clean and durable.",
@@ -65,7 +65,7 @@
     {
         "name": "Gaming Console",
         "rating": 4.9,
-        "image": "gaming_console.jpg",
+        "image": "http://surl.li/oqvkp",
         "price": 499.99,
         "discount_price": 449.99,
         "description": "Experience immersive gaming with our latest gaming console. High-quality graphics and a vast game library.",
@@ -74,7 +74,7 @@
     {
         "name": "Digital Camera",
         "rating": 4.5,
-        "image": "digital_camera.jpg",
+        "image": "http://surl.li/oqvlk",
         "price": 399.99,
         "discount_price": 349.99,
         "description": "Capture stunning moments with our high-resolution digital camera. Perfect for photography enthusiasts.",
@@ -83,7 +83,7 @@
     {
         "name": "Smart Doorbell",
         "rating": 4.6,
-        "image": "smart_doorbell.jpg",
+        "image": "http://surl.li/oqvmr",
         "price": 129.99,
         "discount_price": 109.99,
         "description": "Enhance your home security with our smart doorbell. Receive alerts and see who's at your door from your phone.",
@@ -92,7 +92,7 @@
     {
         "name": "Electric Toothbrush",
         "rating": 4.4,
-        "image": "toothbrush.jpg",
+        "image": "http://surl.li/oqvnh",
         "price": 49.99,
         "discount_price": 39.99,
         "description": "Maintain oral health with our advanced electric toothbrush. Gentle on gums and effective in cleaning.",
@@ -101,25 +101,24 @@
     {
         "name": "Smart Lighting Kit",
         "rating": 4.2,
-        "image": "smart_lighting.jpg",
+        "image": "http://surl.li/oqvog",
         "price": 89.99,
         "discount_price": 69.99,
         "description": "Transform your home with our smart lighting kit. Control colors and intensity with your smartphone.",
         "discount_percent": 22
-    },
-    {
+    },{
         "name": "Portable Power Bank",
         "rating": 4.7,
-        "image": "power_bank.jpg",
+        "image": "http://surl.li/oqvox",
         "price": 39.99,
         "discount_price": 29.99,
-        "description": "Stay charged on the go with our portable power bank. Compact and powerful for all your devices.",
+"description": "Stay charged on the go with our portable power bank. Compact and powerful for all your devices.",
         "discount_percent": 25
     },
     {
         "name": "Wireless Charging Pad",
         "rating": 4.3,
-        "image": "charging_pad.jpg",
+        "image": "http://surl.li/oqvpg",
         "price": 29.99,
         "discount_price": 24.99,
         "description": "Charge your devices wirelessly with our sleek charging pad. Compatible with a variety of devices.",
@@ -128,7 +127,7 @@
     {
         "name": "Smartwatch",
         "rating": 4.6,
-        "image": "smartwatch.jpg",
+        "image": "http://surl.li/oqvpm",
         "price": 199.99,
         "discount_price": 179.99,
         "description": "Track your fitness and stay connected with our feature-packed smartwatch. Stylish and functional.",
@@ -137,7 +136,7 @@
     {
         "name": "Electric Kettle",
         "rating": 4.4,
-        "image": "kettle.jpg",
+        "image": "http://surl.li/oqvpv",
         "price": 34.99,
         "discount_price": 24.99,
         "description": "Boil water quickly and efficiently with our electric kettle. Perfect for tea and coffee enthusiasts.",
@@ -146,7 +145,7 @@
     {
         "name": "Smart Refrigerator",
         "rating": 4.8,
-        "image": "refrigerator.jpg",
+        "image": "http://surl.li/oqvqp",
         "price": 1499.99,
         "discount_price": 1299.99,
         "description": "Keep your food fresh and organized with our smart refrigerator. Monitor contents from your phone.",
@@ -155,7 +154,7 @@
     {
         "name": "Electric Fan",
         "rating": 4.2,
-        "image": "fan.jpg",
+        "image": "http://surl.li/oqvrd",
         "price": 59.99,
         "discount_price": 49.99,
         "description": "Stay cool in the summer heat with our powerful electric fan. Adjustable settings for comfort.",
@@ -164,7 +163,7 @@
     {
         "name": "Smart Coffee Maker",
         "rating": 4.5,
-        "image": "coffee_maker.jpg",
+        "image": "http://surl.li/oqvrp",
         "price": 89.99,
         "discount_price": 69.99,
         "description": "Brew your favorite coffee with our smart coffee maker. Set brewing preferences from your phone.",
@@ -173,7 +172,7 @@
     {
         "name": "Electric Shaver",
         "rating": 4.3,
-        "image": "shaver.jpg",
+        "image": "http://surl.li/oqvsb",
         "price": 79.99,
         "discount_price": 59.99,
         "description": "Achieve a smooth shave with our advanced electric shaver. Gentle on the skin with precision blades.",
