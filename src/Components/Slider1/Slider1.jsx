@@ -5,12 +5,13 @@ import ProductCard from "../Products/ProductCard";
 import Products from "../Products/Products";
 
 const Slider1 = () => {
-    const { products } = Products();
+    const { products, loading } = Products();
     const productsPerPageDesktop = 4;
     const productsPerPageMobile = 1;
 
     const [startIndex, setStartIndex] = useState(0);
     const [productsPerPage, setProductsPerPage] = useState(productsPerPageDesktop);
+    const [sliderActionLoading, setSliderActionLoading] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -31,24 +32,40 @@ const Slider1 = () => {
     }, [productsPerPageDesktop, productsPerPageMobile]);
 
     const handlePrev = () => {
-        setStartIndex((prevIndex) => Math.max(0, prevIndex - productsPerPage));
+        setSliderActionLoading(true);
+
+        setTimeout(() => {
+            setStartIndex((prevIndex) => Math.max(0, prevIndex - productsPerPage));
+            setSliderActionLoading(false);
+        }, 500);
     };
 
     const handleNext = () => {
-        setStartIndex((prevIndex) =>
-            Math.min(prevIndex + productsPerPage, products.length - productsPerPage)
-        );
+        setSliderActionLoading(true);
+
+        setTimeout(() => {
+            setStartIndex((prevIndex) =>
+                Math.min(prevIndex + productsPerPage, products.length - productsPerPage)
+            );
+            setSliderActionLoading(false);
+        }, 500);
     };
+
+    if (loading || sliderActionLoading) {
+        return <div className="h-10 w-10 rounded-full border-8 border-dashed border-black mt-44 animate-spin mx-auto"></div>;
+    }
 
     return (
         <div className="w-full h-screen lg:w-5/6 mx-auto mt-8 lg:mt-14">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-16 p-4 justify-items-center relative overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-28 p-4 justify-items-center relative overflow-hidden">
                 <button
                     onClick={handlePrev}
-                    className="absolute left-0 top-1/2 transform -translate-y-1/2 shadow-2xl p-3 rounded-full border-2 border-gray-100"
+                    className="absolute left-0 top-1/2 transform -translate-y-1/2 shadow-2xl p-3 rounded-full border-2 hover:bg-orange-600 border-gray-100"
                 >
-                    <FaArrowLeft className="text-gray-600 text-2xl" />
+                    <FaArrowLeft className="text-gray-600 text-2xl hover:text-white" />
                 </button>
+
+                <div className="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-2/3 bg-gray-100 h-1"></div>
 
                 {products.slice(startIndex, startIndex + productsPerPage).map((product, index) => (
                     <div
@@ -61,9 +78,9 @@ const Slider1 = () => {
 
                 <button
                     onClick={handleNext}
-                    className="absolute right-0 top-1/2 transform -translate-y-1/2 shadow-2xl p-3 rounded-full border-2 border-gray-100"
+                    className="absolute right-0 top-1/2 transform -translate-y-1/2 shadow-2xl p-3 rounded-full border-2 hover:bg-orange-600 border-gray-100"
                 >
-                    <FaArrowRight className="text-gray-600 text-2xl" />
+                    <FaArrowRight className="text-gray-600 text-2xl hover:text-white" />
                 </button>
             </div>
         </div>
