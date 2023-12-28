@@ -11,7 +11,7 @@ const Header = () => {
 
     return (
         <>
-            <div className="flex items-center justify-center mt-8 gap-4 w-2/3 mx-auto">
+            <div className="flex items-center justify-center mt-8 gap-4 w-full lg:w-2/3 mx-auto">
                 <NavLink
                     to="/slider1"
                     className={({ isActive }) => (isActive ? "text-lg uppercase shadow-2xl shadow-cyan-300 text-white bg-teal-500 rounded-tl-2xl py-1 px-3 font-semibold font-mono" : "text-lg uppercase shadow-2xl shadow-cyan-300 bg-black text-white hover:bg-teal-500 rounded-tl-2xl py-1 px-3 font-semibold font-mono")}
